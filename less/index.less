@@ -1,7 +1,7 @@
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+	v2.0 | 20110126
+	License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -54,6 +54,178 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+//variables
+@headerWeight: 600;
+@headerFontFam: Arial, Helvetica, sans-serif;
+//
+//mixins
+.boldHeaderClass
+{
+	font-weight: @headerWeight;
+	font-family: @headerFontFam;
+}
+.wHistoryTableCol
+{
+	display:flex;
+	flex-flow: column nowrap;
+	p
+	{
+		font-size: 1.8rem;
+	}
+}
+//
+html
+{
+	font-size: 62.5%;
+}
+
+main
+{
+	width: 93.5rem;
+	padding-left: 5.0rem;
+	header
+	{
+		nav
+		{
+			display: flex;
+			justify-content: space-between;
+			margin-left: 57.9rem;
+			margin-top: 2.9rem;
+			a
+			{
+				font-size: 1.8rem;
+				font-weight: 500;
+				text-decoration: none;
+				color:black;
+			}
+		}
+		margin-bottom: 3rem;
+	}
+
+	.topContent
+	{
+		display:flex;
+		flex-flow: column;
+		justify-content: space-around;
+		background-color: #E9ECEF;
+		margin-left: 1.4rem;
+		img {
+			padding: 6.5rem 0rem 1rem 3rem;
+			width:32.4rem;
+		}
+		h1
+		{
+			font-size: 5.35rem;
+			font-family: @headerFontFam;
+			padding-left: 3rem;
+		}
+		h2
+		{
+			padding:1.8rem 0rem 2.47rem 3rem;
+			font-size: 1.9rem;
+			font-family: @headerFontFam;
+		}
+		hr
+		{
+			width: 100% - 7.2rem;	
+			border: .05rem solid darkgray;
+		}
+		p
+		{
+			padding:3rem 0 1.3rem 3rem;
+			font-size: 2rem;
+		}
+		button
+		{
+			margin-left: 3rem;
+			margin-bottom: 8rem;
+			width: 15.5rem;
+			height: 4.5rem;
+			border-radius: 0.4rem;
+			border:none;
+			background-color: #808080;
+			color: white;
+			font-size: 2rem;
+			font-weight: 400;
+		}
+
+	}
+
+	.bottomContent
+	{
+		margin-top:4rem;
+		margin-left: 1rem;
+		h2
+		{
+			padding:0 0rem 1.5rem 0;
+			font-size: 3rem;
+			.boldHeaderClass();
+		}
+		h3
+		{
+			padding:0 0rem 0.8rem 0;
+			font-size: 2.5rem;
+			.boldHeaderClass();
+		}
+		.listenUpAndStuff
+		{
+			display: flex;
+			// justify-content: space-between;
+			.heyListen
+			{
+				width:40rem;
+				margin-right: 6rem;
+				p
+				{
+					font-size: 2rem;
+				}
+			}
+			.goodList
+			{
+				font-size: 1.6rem;
+				font-family: @headerFontFam;
+				li
+				{
+					
+					border: 1px solid lightgray;
+					border-top: none;
+					padding: 1.5rem 20rem 1.5rem 1.5rem;
+					
+				}
+				.firstLI
+				{
+					border-top:1px solid lightgray;
+					border-top-right-radius: .6rem;
+					border-top-left-radius: .6rem;
+				}
+				.lastLI
+				{
+					border-bottom-right-radius: .6rem;
+					border-bottom-left-radius: .6rem;
+				}
+			}
+			
+		}
+
+		.workHistory
+		{
+			margin-top: 4.8rem;
+			.tableCol
+			{
+				.wHistoryTableCol();
+				p
+				{
+					padding-top: 1rem;
+					padding-bottom: 1rem;
+				}
+				.firstCol p
+				{
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
