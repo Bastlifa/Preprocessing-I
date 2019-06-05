@@ -373,7 +373,7 @@ main .bottomContent .workHistory td:first-child {
   font-weight: bold;
 }
 main footer {
-  background-color: black;
+  background-color: #808080;
   height: 7rem;
 }
 @media (max-width: 500px) {
@@ -382,9 +382,16 @@ main footer {
   }
 }
 main footer p {
-  margin-top: 8rem;
-  padding-top: 8rem;
-  font-size: 7.2rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  font-size: 2rem;
   text-align: center;
   color: white;
+}
+@media (max-width: 500px) {
+  main footer p {
+    margin-top: 8rem;
+    padding-top: 8rem;
+    font-size: 8rem;
+  }
 }
