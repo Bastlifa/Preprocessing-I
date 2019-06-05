@@ -138,12 +138,9 @@ body {
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
 }
-.wHistoryTableCol {
+.toFlexCol {
   display: flex;
   flex-flow: column nowrap;
-}
-.wHistoryTableCol p {
-  font-size: 1.8rem;
 }
 html {
   font-size: 62.5%;
@@ -152,6 +149,11 @@ main {
   width: 93.5rem;
   padding-left: 5rem;
 }
+@media (max-width: 500px) {
+  main {
+    padding-left: 0;
+  }
+}
 main header {
   margin-bottom: 3rem;
 }
@@ -159,13 +161,28 @@ main header nav {
   display: flex;
   justify-content: space-between;
   margin-left: 57.9rem;
-  margin-top: 2.9rem;
+  font-size: 1.8rem;
 }
 main header nav a {
-  font-size: 1.8rem;
+  margin-top: 2.9rem;
   font-weight: 500;
   text-decoration: none;
   color: black;
+}
+@media (max-width: 500px) {
+  main header nav a {
+    padding-bottom: 2.9rem;
+    border-bottom: 1px solid black;
+  }
+}
+@media (max-width: 500px) {
+  main header nav {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 0;
+    align-items: center;
+    font-size: 5rem;
+  }
 }
 main .topContent {
   display: flex;
@@ -183,10 +200,20 @@ main .topContent h1 {
   font-family: Arial, Helvetica, sans-serif;
   padding-left: 3rem;
 }
+@media (max-width: 500px) {
+  main .topContent h1 {
+    font-size: 5rem;
+  }
+}
 main .topContent h2 {
   padding: 1.8rem 0rem 2.47rem 3rem;
   font-size: 1.9rem;
   font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  main .topContent h2 {
+    font-size: 4rem;
+  }
 }
 main .topContent hr {
   width: 92.8%;
@@ -195,6 +222,11 @@ main .topContent hr {
 main .topContent p {
   padding: 3rem 0 1.3rem 3rem;
   font-size: 2rem;
+}
+@media (max-width: 500px) {
+  main .topContent p {
+    font-size: 4rem;
+  }
 }
 main .topContent button {
   margin-left: 3rem;
@@ -208,6 +240,14 @@ main .topContent button {
   font-size: 2rem;
   font-weight: 400;
 }
+@media (max-width: 500px) {
+  main .topContent button {
+    font-size: 4rem;
+    height: 12rem;
+    width: 45rem;
+    border-radius: 1.6rem;
+  }
+}
 main .bottomContent {
   margin-top: 4rem;
   margin-left: 1rem;
@@ -218,54 +258,133 @@ main .bottomContent h2 {
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
 }
+@media (max-width: 500px) {
+  main .bottomContent h2 {
+    font-size: 5rem;
+  }
+}
 main .bottomContent h3 {
   padding: 0 0rem 0.8rem 0;
   font-size: 2.5rem;
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
 }
+@media (max-width: 500px) {
+  main .bottomContent h3 {
+    font-size: 4rem;
+  }
+}
 main .bottomContent .listenUpAndStuff {
   display: flex;
+}
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
 }
 main .bottomContent .listenUpAndStuff .heyListen {
   width: 40rem;
   margin-right: 6rem;
 }
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff .heyListen {
+    width: 80rem;
+    margin-bottom: 5rem;
+  }
+}
 main .bottomContent .listenUpAndStuff .heyListen p {
   font-size: 2rem;
+}
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff .heyListen p {
+    font-size: 4rem;
+  }
 }
 main .bottomContent .listenUpAndStuff .goodList {
   font-size: 1.6rem;
   font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff .goodList {
+    font-size: 4rem;
+  }
 }
 main .bottomContent .listenUpAndStuff .goodList li {
   border: 1px solid lightgray;
   border-top: none;
   padding: 1.5rem 20rem 1.5rem 1.5rem;
 }
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff .goodList li {
+    border-width: 4px;
+  }
+}
 main .bottomContent .listenUpAndStuff .goodList .firstLI {
   border-top: 1px solid lightgray;
   border-top-right-radius: 0.6rem;
   border-top-left-radius: 0.6rem;
 }
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff .goodList .firstLI {
+    border-width: 4px;
+    border-top-right-radius: 2.4rem;
+    border-top-left-radius: 2.4rem;
+  }
+}
 main .bottomContent .listenUpAndStuff .goodList .lastLI {
   border-bottom-right-radius: 0.6rem;
   border-bottom-left-radius: 0.6rem;
 }
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff .goodList .lastLI {
+    border-width: 4px;
+    border-bottom-right-radius: 2.4rem;
+    border-bottom-left-radius: 2.4rem;
+  }
+}
 main .bottomContent .workHistory {
   margin-top: 4.8rem;
 }
-main .bottomContent .workHistory .tableCol {
-  display: flex;
-  flex-flow: column nowrap;
+main .bottomContent .workHistory table {
+  border-collapse: collapse;
+  width: 100%;
 }
-main .bottomContent .workHistory .tableCol p {
+main .bottomContent .workHistory th,
+main .bottomContent .workHistory td {
+  text-align: left;
+  padding: 1.8rem;
   font-size: 1.8rem;
 }
-main .bottomContent .workHistory .tableCol p {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+@media (max-width: 500px) {
+  main .bottomContent .workHistory th,
+  main .bottomContent .workHistory td {
+    font-size: 4rem;
+  }
 }
-main .bottomContent .workHistory .tableCol .firstCol p {
+main .bottomContent .workHistory th {
   font-weight: bold;
+}
+main .bottomContent .workHistory tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+main .bottomContent .workHistory td:first-child {
+  font-weight: bold;
+}
+main footer {
+  background-color: black;
+  height: 7rem;
+}
+@media (max-width: 500px) {
+  main footer {
+    height: 28rem;
+  }
+}
+main footer p {
+  margin-top: 8rem;
+  padding-top: 8rem;
+  font-size: 7.2rem;
+  text-align: center;
+  color: white;
 }
