@@ -1,1 +1,397 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.boldHeaderClass {
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.toFlexCol {
+  display: flex;
+  flex-flow: column nowrap;
+}
+html {
+  font-size: 62.5%;
+}
+main {
+  width: 93.5rem;
+  padding-left: 5rem;
+}
+@media (max-width: 500px) {
+  main {
+    padding-left: 0;
+  }
+}
+main header {
+  margin-bottom: 3rem;
+}
+main header nav {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 57.9rem;
+  font-size: 1.8rem;
+}
+main header nav a {
+  margin-top: 2.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+@media (max-width: 500px) {
+  main header nav a {
+    padding-bottom: 2.9rem;
+    border-bottom: 1px solid black;
+  }
+}
+@media (max-width: 500px) {
+  main header nav {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 0;
+    align-items: center;
+    font-size: 5rem;
+  }
+}
+main .topContent {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  background-color: #E9ECEF;
+  margin-left: 1.4rem;
+}
+main .topContent img {
+  padding: 6.5rem 0rem 1rem 3rem;
+  width: 32.4rem;
+}
+main .topContent h1 {
+  font-size: 5.35rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 3rem;
+}
+@media (max-width: 500px) {
+  main .topContent h1 {
+    font-size: 5rem;
+  }
+}
+main .topContent h2 {
+  padding: 1.8rem 0rem 2.47rem 3rem;
+  font-size: 1.9rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  main .topContent h2 {
+    font-size: 4rem;
+  }
+}
+main .topContent hr {
+  width: 92.8%;
+  border: 0.05rem solid darkgray;
+}
+main .topContent p {
+  padding: 3rem 0 1.3rem 3rem;
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  main .topContent p {
+    font-size: 4rem;
+  }
+}
+main .topContent button {
+  margin-left: 3rem;
+  margin-bottom: 8rem;
+  width: 15.5rem;
+  height: 4.5rem;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: #808080;
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+}
+@media (max-width: 500px) {
+  main .topContent button {
+    font-size: 4rem;
+    height: 12rem;
+    width: 45rem;
+    border-radius: 1.6rem;
+  }
+}
+main .bottomContent {
+  margin-top: 4rem;
+  margin-left: 1rem;
+}
+main .bottomContent h2 {
+  padding: 0 0rem 1.5rem 0;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  main .bottomContent h2 {
+    font-size: 5rem;
+  }
+}
+main .bottomContent h3 {
+  padding: 0 0rem 0.8rem 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  main .bottomContent h3 {
+    font-size: 4rem;
+  }
+}
+main .bottomContent .listenUpAndStuff {
+  display: flex;
+}
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+  }
+}
+main .bottomContent .listenUpAndStuff .heyListen {
+  width: 40rem;
+  margin-right: 6rem;
+}
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff .heyListen {
+    width: 80rem;
+    margin-bottom: 5rem;
+  }
+}
+main .bottomContent .listenUpAndStuff .heyListen p {
+  font-size: 2rem;
+}
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff .heyListen p {
+    font-size: 4rem;
+  }
+}
+main .bottomContent .listenUpAndStuff .goodList {
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff .goodList {
+    font-size: 4rem;
+  }
+}
+main .bottomContent .listenUpAndStuff .goodList li {
+  border: 1px solid lightgray;
+  border-top: none;
+  padding: 1.5rem 20rem 1.5rem 1.5rem;
+}
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff .goodList li {
+    border-width: 4px;
+  }
+}
+main .bottomContent .listenUpAndStuff .goodList .firstLI {
+  border-top: 1px solid lightgray;
+  border-top-right-radius: 0.6rem;
+  border-top-left-radius: 0.6rem;
+}
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff .goodList .firstLI {
+    border-width: 4px;
+    border-top-right-radius: 2.4rem;
+    border-top-left-radius: 2.4rem;
+  }
+}
+main .bottomContent .listenUpAndStuff .goodList .lastLI {
+  border-bottom-right-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+}
+@media (max-width: 500px) {
+  main .bottomContent .listenUpAndStuff .goodList .lastLI {
+    border-width: 4px;
+    border-bottom-right-radius: 2.4rem;
+    border-bottom-left-radius: 2.4rem;
+  }
+}
+main .bottomContent .workHistory {
+  margin-top: 4.8rem;
+}
+main .bottomContent .workHistory table {
+  border-collapse: collapse;
+  width: 100%;
+}
+main .bottomContent .workHistory th,
+main .bottomContent .workHistory td {
+  text-align: left;
+  padding: 1.8rem;
+  font-size: 1.8rem;
+}
+@media (max-width: 500px) {
+  main .bottomContent .workHistory th,
+  main .bottomContent .workHistory td {
+    font-size: 4rem;
+  }
+}
+main .bottomContent .workHistory th {
+  font-weight: bold;
+}
+main .bottomContent .workHistory tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+main .bottomContent .workHistory td:first-child {
+  font-weight: bold;
+}
+main footer {
+  background-color: #808080;
+  height: 7rem;
+}
+@media (max-width: 500px) {
+  main footer {
+    height: 28rem;
+  }
+}
+main footer p {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+@media (max-width: 500px) {
+  main footer p {
+    margin-top: 8rem;
+    padding-top: 8rem;
+    font-size: 8rem;
+  }
+}
